@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Branches {
+
     private static Scanner scanner = new Scanner(System.in);
     private ArrayList<Customer> customerArrayList;
     private String branchName;
@@ -41,15 +42,16 @@ public class Branches {
         return addCustomer(name, 0.0);
     }
 
-    public boolean Transaction(String customerName, double transaction){
+    public boolean Transaction(String customerName){
         int index = searchCustomerIndex(customerName);
 
         if (index < 0){
             System.out.println("Error: Can not find the customer");
             return false;
         }
-
-        customerArrayList.get(index).addDoubleArrayList(transaction);
+        System.out.println("Please enter the transition amount");
+        double amount = scanner.nextDouble();
+        customerArrayList.get(index).addDoubleArrayList(amount);
         return true;
     }
 

@@ -65,20 +65,25 @@ public class Bank {
             scanner.nextLine();
             switch (select ){
 
-//                case 1:
-//                    System.out.print("Please enter the customer name: ");
-//                    customerName = scanner.nextLine();
-//                    .addBranches(customerName);
-//                    break;
-//
-//                case 2 :
-//                    System.out.print("Please enter the branch name: ");
-//                    customerName = scanner.nextLine();
-//                    myBank.searchBranchIndex()
-//                    break;
-//                case 3:
-//                    myBank.displayAllBranches();
-//                    break;break
+                case 1:
+                    System.out.print("Please enter the customer name: ");
+                   customerName = scanner.nextLine();
+                    branchesArrayList.get(index).addCustomer( customerName);
+                    break;
+
+                case 2 :
+                    System.out.print("Please enter the customer name: ");
+                    customerName = scanner.nextLine();
+                    branchesArrayList.get(index).Transaction(customerName);
+                    break;
+                case 3:
+                    branchesArrayList.get(index).displayAllCustomer();
+                    break;
+                case 4:
+                    System.out.print("Please enter the customer name: ");
+                    customerName = scanner.nextLine();
+                    branchesArrayList.get(index).displayCustomerTransition(customerName);
+                    break;
                 case 0:
                     System.out.println("Go Back to the Bank System ");
                     flag = false;
@@ -94,8 +99,9 @@ public class Bank {
     private void branchMenu(){
         System.out.println("--------------------------------------------");
         System.out.println("1. Add a Customer");
-        System.out.println("2. Go to one Customer");
+        System.out.println("2. Customer Transition");
         System.out.println("3. Display all the customer");
+        System.out.println("4. Display Customer detail");
         System.out.println("0. Back to Bank System");
         System.out.println("--------------------------------------------");
 
