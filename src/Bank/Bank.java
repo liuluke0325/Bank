@@ -11,13 +11,10 @@ public class Bank {
 
 
     public Bank(String bankName) {
-//        System.out.println("Please enter the name of bank");
-        this.bankName = bankName;
 
+        this.bankName = bankName;
         branchesArrayList = new ArrayList<Branches>();
-//        System.out.println("Please enter the first branch name for "+this.bankName + " : ");
-//        String branchName = scanner.nextLine();
-//        branchesArrayList.add(new Branches(branchName));
+
     }
 
 

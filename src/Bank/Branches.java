@@ -39,7 +39,10 @@ public class Branches {
     }
 
     public boolean addCustomer(String name){
-        return addCustomer(name, 0.0);
+        System.out.print("Please enter the initial amount");
+        double initialAmount = scanner.nextDouble();
+        scanner.nextLine();
+        return addCustomer(name, initialAmount);
     }
 
     public boolean Transaction(String customerName){
@@ -49,7 +52,7 @@ public class Branches {
             System.out.println("Error: Can not find the customer");
             return false;
         }
-        System.out.println("Please enter the transition amount");
+        System.out.println("Please enter the transition amount: ");
         double amount = scanner.nextDouble();
         customerArrayList.get(index).addDoubleArrayList(amount);
         return true;

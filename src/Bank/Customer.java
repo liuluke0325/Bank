@@ -6,18 +6,17 @@ public class Customer {
     private String name;
     private ArrayList<Double> doubleArrayList;
 
-    public Customer() {
-        this(null);
-    }
 
     public Customer(String name) {
-        this.name = name;
-        doubleArrayList = new ArrayList<Double>();
+        this(name,0.0);
+        //doubleArrayList = new ArrayList<Double>();
+
     }
 
 
     public Customer(String name, double initialAmount) {
-        this(name);
+        this.name = name;
+        doubleArrayList = new ArrayList<Double>();
         this.doubleArrayList.add(Double.valueOf(initialAmount));
     }
 
